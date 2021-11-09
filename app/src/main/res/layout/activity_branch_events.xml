@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/events_activity_background">
+
+    <ImageView
+        android:id="@+id/ic_arrow_back_app_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_branch_events_header_image_view_margin_start"
+        app:layout_constraintBottom_toBottomOf="@id/conference_app_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/conference_app_image_view"
+        app:srcCompat="@drawable/ic_arrow_back_bold" />
+
+    <ImageView
+        android:id="@+id/conference_app_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/activity_branch_events_header_image_view_margin_top"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_white_1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_branch_events_nested_scroll_view_padding_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conference_app_image_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/branch_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/activity_branch_events_title_text_view_margin_bottom"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_branch_events_title_text_view_size"
+                android:textStyle="bold"
+                tools:text="Android" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/event_card_vertical_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/vh_event_card_vertical">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:layout_width="@dimen/activity_branch_events_favourite_button_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/activity_branch_events_favourite_button_margin_bottom"
+        android:background="@drawable/bg_to_favourite_button"
+        android:drawableLeft="@drawable/ic_like_big"
+        android:drawablePadding="@dimen/activity_branch_events_favourite_button_drawable_padding"
+        android:padding="@dimen/activity_branch_events_favourite_button_padding"
+        android:text="@string/add_to_favourite_text"
+        android:textAllCaps="false"
+        android:textColor="@color/add_to_favourite_color"
+        android:textSize="@dimen/activity_branch_events_favourite_button_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/activity_upcoming_events_progress"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

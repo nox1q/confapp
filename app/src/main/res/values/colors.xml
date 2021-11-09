@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="silver">#888B94</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1C1819</color>
+    <color name="activity_upcoming_events_progress">#018786</color>
+    <color name="entered_name_color">#FAFAFA</color>
+    <color name="add_to_favourite_color">#2A81DD</color>
+    <color name="report_finished_state_color">#FF0000</color>
+    <color name="vh_event_card_finished_background">#4D000000</color>
+</resources>

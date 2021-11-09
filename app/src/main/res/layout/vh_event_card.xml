@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vh_event_card"
+    android:layout_width="@dimen/event_card_layout_width"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/event_card_margin_end"
+    android:background="@drawable/bg_vh_event_card"
+    app:cardCornerRadius="@dimen/vh_event_card_corner_radius">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/next_report_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/vh_event_card_margin_start"
+        app:cardBackgroundColor="@color/add_to_favourite_color"
+        app:cardCornerRadius="@dimen/event_card_next_meeting_corner_radius">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/event_card_next_meeting_text_view_padding_start"
+            android:paddingEnd="@dimen/event_card_next_meeting_text_view_padding_end"
+            android:text="@string/next_report_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/event_card_next_meeting_text_view_text_size" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/event_card_favourite_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/ic_heart_image_margin_top"
+        android:layout_marginEnd="@dimen/ic_heart_image_margin_end"
+        app:srcCompat="@drawable/ic_like_big" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/event_card_layout_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/event_card_start_end_place_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/event_card_start_end_place_text_view_margin_top"
+            android:layout_marginBottom="@dimen/event_card_start_end_place_text_view_margin_bottom"
+            tools:text="15:00 - 16:00 • Зал номер 5" />
+
+        <TextView
+            android:id="@+id/event_card_speaker_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="Жалгас Бакин" />
+
+        <TextView
+            android:id="@+id/event_card_job_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/event_card_job_text_view_margin_bottom"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/event_card_job_text_view_text_size"
+            tools:text="Android-разработчик в Альфа Банке" />
+
+        <TextView
+            android:id="@+id/event_card_description_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:minLines="3"
+            android:textColor="@color/black"
+            tools:text="Борьба за независимость  в многомодульных приложениях" />
+    </LinearLayout>
+
+</FrameLayout>

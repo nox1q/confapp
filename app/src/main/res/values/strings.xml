@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">confapp</string>
+    <string name="name_fmt">Привет, %1s</string>
+    <string name="server_error">Ошибка сервера</string>
+    <string name="button_activity_continue">Продолжить</string>
+    <string name="activity_edit_text_enter_name">Введите имя</string>
+    <string name="activity_main_text_view_name">Как тебя зовут?</string>
+    <string name="sync_loading_button_text">Sync Loading</string>
+    <string name="async_loading_button_text">Async Loading</string>
+    <string name="favourite_button_pressed">Added to Favourite</string>
+    <string name="next_report_text">Следующий доклад</string>
+    <string name="finished_report_text">Завершен</string>
+    <string name="add_to_favourite_text">В избранные</string>
+</resources>
